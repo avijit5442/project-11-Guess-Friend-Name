@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        button{
+            width:60px;
+            margin-top:10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input id="in1"/>
+    <button onclick="add()">Add</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="find()">Find</button>
+    <output id="result"></output>
+    <script>
+        var arr=[];
+        var index=0;
+        add=()=>{
+            
+            arr[index]=in1.value;
+            index++;
+            in1.value='';
+        }
+        reset=()=>{
+            arr.length=0;
+        }
+        find=()=>{
+            document.getElementById("result").innerHTML=(arr[Math.floor(Math.random()*arr.length)]);
+            document.getElementById("result").style.color="red"
+        }
+        
+    </script>
+</body>
+</html>
